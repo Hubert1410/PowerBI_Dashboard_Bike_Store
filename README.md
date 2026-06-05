@@ -1,7 +1,7 @@
 # Data Jobs Dashboard w/ Power BI
-![Dashboard Page 1](/images/[Exec Dash.png])
+![aa](/Images/1_Exec_Dash.png)
 
-
+## Introduction
 AdventureWorks is a global company that makes and sells bicycles, bike parts, and cycling accessories. As a Data Analyst before making a dashboard I wyznaczyłem cele dashboardu i odpowiedziałem na kluczowe pytania.
 
 
