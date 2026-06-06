@@ -59,3 +59,27 @@ A Snowflake Schema is an extension of a Star Schema where **dimension tables are
 * **2 Fact Tables:** `Sales Data` and `Returns Data` — containing granular transactional records (dates, quantities, prices).
 * **6 Dimension Tables:** Providing context across the model (`Calendar Lookup`, `Customer Lookup`, `Territory Lookup`, and the normalized Product tables).
 * **The Downstream Principle:** Filters always flow "downstream" — from the 1-side (Dimension tables) to the many-side (Fact tables). For example, filtering by a *Product Category* automatically propagates down to filter the *Subcategories*, which filters the *Products*, and ultimately filters the rows in the *Sales* table.
+
+
+
+
+<!-- cutted:
+### Downstream Data Flow & Filter Propagation
+In Power BI, understanding and managing the direction of data flow is critical. In this model, relationships are strictly configured as 1-to-many (1 ➔ **\***) with a Single Cross-Filter Direction.
+
+* **The Downstream Principle:** Filters always flow "downstream" — from the 1-side (Dimension tables) to the many-side (Fact tables). For example, filtering by a *Product Category* automatically propagates down to filter the *Subcategories*, which filters the *Products*, and ultimately filters the rows in the *Sales* table.
+
+
+* **Why it matters:** 
+  1. **Performance & Efficiency:** Single-direction downstream filtering minimizes memory usage and speeds up DAX calculations because Power BI doesn't have to evaluate complex, multi-directional paths.
+  2. **Data Integrity:** It prevents ambiguity and "double-counting" errors in measures.
+  3. **No Bi-directional Hazards:** Avoiding bi-directional filters ensures that filtering a fact table doesn't accidentally alter or restrict the available options in unrelated dimension slicers.
+-->
+
+
+<!-- To Add:
+ PowerQuery section before Data Model
+ Dax section
+ Business key information
+-->
+
